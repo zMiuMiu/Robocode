@@ -1,37 +1,36 @@
 package bastion;
 
 import robocode.*;
-import java.awt.Color;
-
-// API help : https://robocode.sourceforge.io/docs/robocode/robocode/Robot.html
+import java.awt.Color; 
+import java.util.Random; //random
+import java.awt.geom.Point2D; //cordenada
 
 /**
- * Bastion - a robot by (Nicole)
+ * Bastion - a robot by (Nicole & Fofolete)
  */
-public class Bastion extends Robot {
-	boolean movingForward;
-
-	/**
-	 * run: Bastion's default behavior
-	 */
+public class Bastion extends AdvancedRobot {
+	double enemyEnergy = 100;
+	double enemyDistance;
+	double enemyVelocidade;
+	double enemyAngulo;
+	double enemyAngAbs;
+	double enemyX, enemyY;
+	
 	public void run() {
-		// Initialization of the robot should be put here
-
-		// After trying out your robot, try uncommenting the import at the top,
-		// and the next line:
 
 		setColors(Color.magenta, Color.cyan, Color.white, Color.red, Color.magenta);
 		// body,gun,radar
 
 		// Robot main loop
 		while (true) {
-			// teste de movimentação zigzag
+			/* teste de movimentação zigzag
 			ahead(100);
 			turnRight(120);
 			turnGunRight(180);
 			back(100);
 			turnLeft(120);
 			turnGunLeft(180);
+			*/
 
 		}
 	}
@@ -40,7 +39,7 @@ public class Bastion extends Robot {
 	 * onScannedRobot: What to do when you see another robot
 	 */
 	public void onScannedRobot(ScannedRobotEvent e) {
-		// teste de dano
+		// tomada de decisão de tiro
 		fire(3);
 	}
 
